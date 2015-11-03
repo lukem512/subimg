@@ -46,6 +46,10 @@ int main (int argc, char** argv)
         return EXIT_FAILURE;
     }
     
+    // This code will also work:
+    // Rect r(x1, y1, x2-x1, y2-y1);
+    // img(r).copyTo(subimg);
+    
     // create the sub image
     subimg.create(x2-x1, y2-y1, CV_8U);
     subimg.setTo(Scalar(0));
